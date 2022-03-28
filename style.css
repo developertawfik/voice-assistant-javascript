@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: rgb(27, 39, 49);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body::after{
+    content: "Developed by Developer Tawfik";
+    bottom: 5px;
+    right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(149, 149, 149);
+    text-transform: capitalize;
+    position: absolute;
+  }
+  .sound-icon {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    background: gray;
+    border-radius: 500px;
+    padding: 20px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+    text-align: center;
+    margin: auto;
+  }
+  .sound-icon.active {
+    position: relative;
+  }
+  
+  .sound-icon.active::before {
+    content: "";
+    width: 109px;
+    height: 109px;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: runing 3s infinite;
+    background-color: rgba(128, 128, 128, 0.527);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-animation: runing 4s ease infinite;
+  }
+  h3.content {
+      color: white;
+      font-size: 20px;
+      text-transform: capitalize;
+  }
+  .sound-icon.active::after {
+      content: "";
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      animation: runing 3s infinite;
+      background-color: rgba(128, 128, 128, 0.527);
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -webkit-animation: runing2 2s ease infinite;
+    }
+    
+  
+  @keyframes runing {
+      0%{
+          width: 114px;
+          height: 114px; 
+      }
+      50%{
+          width: 105px;
+          height: 105px;
+      }
+      100%{
+          width: 114px;
+          height: 114px;
+      }
+  }
+  
+  
+  @keyframes runing2 {
+      0%{
+          width: 120px;
+          height: 120px; 
+      }
+      50%{
+          width: 114px;
+          height: 114px;
+      }
+      100%{
+          width: 120px;
+          height: 120px;
+      }
+  }
+
+  .command-list{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(194, 190, 190, 0.486);
+    border-radius: 25px;
+    padding:20px;
+    backdrop-filter: blur(100px);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+}
+
+.command-list.active{
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+.command-list h4::before{
+  content: "#";
+  color: rgb(223, 56, 14);
+  margin-right: 5px;
+
+}
+button#btn {
+  color: white;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  background: red;
+  padding: 9px;
+  cursor: pointer;
+  border-radius: 13px;
+}
+.command-list button {
+  background: gray;
+  color: red;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  margin-top: 19px;
+  box-shadow: 0px 0px 4px -1px #ffffff4d;
+  cursor: pointer;
+  border: 1px solid red;
+}
+.command-list ul li{
+  margin-left: 17px;
+}
